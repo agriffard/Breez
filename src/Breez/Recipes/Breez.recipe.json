@@ -1,10 +1,11 @@
 {
   "name": "Breez",
-  "displayName": "Breez Theme Recipe",
+  "displayName": "Breez",
   "description": "Apply the Breez theme and seed demo content.",
   "author": "Antoine",
   "website": "https://github.com/agriffard/Breez",
   "version": "1.0.0",
+  "issetuprecipe": true,
   "steps": [
     {
       "name": "Themes",
@@ -130,7 +131,7 @@
             "TitlePart": { "Title": "Hello Breez" },
             "AutoroutePart": { "Path": "blog/hello-breez" },
             "HtmlBodyPart": { "Html": "<p>This first post introduces the Breez design system.</p>" },
-            "TagsPart": { "Tags": ["breez", "theme"] },
+            "TagsPart": { "Tags": [ "breez", "theme" ] },
             "ContainedPart": { "ListContentItemId": "blog-main-en" }
           },
           "LocalizationPart": { "Culture": "en" }
@@ -145,7 +146,7 @@
             "TitlePart": { "Title": "Bonjour Breez" },
             "AutoroutePart": { "Path": "fr/blog/bonjour-breez" },
             "HtmlBodyPart": { "Html": "<p>Ce billet présente la version française du thème Breez.</p>" },
-            "TagsPart": { "Tags": ["breez", "fr"] }
+            "TagsPart": { "Tags": [ "breez", "fr" ] }
           },
           "LocalizationPart": { "Culture": "fr" }
         }

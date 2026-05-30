@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <PackageId>Breez</PackageId>
     <Version>1.0.0</Version>
     <Title>Breez</Title>
-    <Authors>Antoine</Authors>
-    <Description>A Tailwind CSS v4 front-end theme for Orchard Core.</Description>
+    <Authors>Antoine Griffard</Authors>
+    <Description>A Tailwind CSS front-end theme for Orchard Core.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
     <TailwindExeExtension Condition="'$(OS)' == 'Windows_NT'">.exe</TailwindExeExtension>
