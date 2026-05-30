@@ -1,0 +1,12 @@
+{% if Model.Items.size > 0 %}
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  {% for item in Model.Items %}
+    {% if forloop.last %}
+      <span class="current" aria-current="page">{{ item.Text }}</span>
+    {% else %}
+      <a href="{{ item.Url }}">{{ item.Text }}</a>
+      <span>/</span>
+    {% endif %}
+  {% endfor %}
+</nav>
+{% endif %}

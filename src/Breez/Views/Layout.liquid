@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="{{ Culture.Name }}" class="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ Site.SiteName }}{% if Model.TitlePart %} - {{ Model.TitlePart.Title }}{% endif %}</title>
+  {% render_section "CommonStyles", required: false %}
+  {% style name:"Breez" %}
+  {% resources type:"Meta" %}
+  {% resources type:"HeadLink" %}
+  {% resources type:"Stylesheet" %}
+</head>
+<body>
+  <a class="skip-link" href="#main-content">{{ "Skip to main content" | t }}</a>
+
+  <header class="site-header">
+    <div class="container py-3 flex items-center justify-between gap-4">
+      <a class="brand" href="{{ "~/?" | href }}">{{ Site.SiteName }}</a>
+      <div class="inline-flex gap-2">
+        <button id="mobile-nav-toggle" class="btn btn-outline lg:hidden" aria-expanded="false" aria-controls="primary-nav" aria-label="{{ "Toggle navigation" | t }}">{{ "Menu" | t }}</button>
+        <button id="theme-toggle" class="btn btn-outline" type="button" aria-pressed="false" aria-label="{{ "Toggle dark mode" | t }}">{{ "Theme" | t }}</button>
+      </div>
+    </div>
+    <nav id="primary-nav" class="site-nav container hidden lg:flex py-2" aria-label="{{ "Main navigation" | t }}">
+      {% zone "Navigation" %}
+    </nav>
+  </header>
+
+  <div class="container py-2">
+    {% zone "Header" %}
+  </div>
+
+  <main id="main-content" class="container py-6" tabindex="-1">
+    <div class="grid gap-6 lg:grid-cols-4">
+      <aside class="lg:col-span-1">{% zone "AsideFirst" %}</aside>
+      <section class="lg:col-span-2">{% zone "Content" %}</section>
+      <aside class="lg:col-span-1">{% zone "AsideSecond" %}</aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      {% zone "Footer" %}
+    </div>
+  </footer>
+
+  {% resources type:"FootScript" %}
+  <script>
+    (function(){
+      var doc = document.documentElement;
+      var key = 'breez-theme';
+      var mq = window.matchMedia('(prefers-color-scheme: dark)');
+      var stored = localStorage.getItem(key);
+      var dark = stored ? stored === 'dark' : mq.matches;
+      doc.classList.toggle('dark', dark);
+
+      var themeBtn = document.getElementById('theme-toggle');
+      if(themeBtn){
+        themeBtn.setAttribute('aria-pressed', String(dark));
+        themeBtn.addEventListener('click', function(){
+          dark = !doc.classList.contains('dark');
+          doc.classList.toggle('dark', dark);
+          localStorage.setItem(key, dark ? 'dark' : 'light');
+          themeBtn.setAttribute('aria-pressed', String(dark));
+        });
+      }
+
+      var navBtn = document.getElementById('mobile-nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if(navBtn && nav){
+        navBtn.addEventListener('click', function(){
+          var expanded = navBtn.getAttribute('aria-expanded') === 'true';
+          navBtn.setAttribute('aria-expanded', String(!expanded));
+          nav.classList.toggle('hidden', expanded);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+{
+  "name": "Breez",
+  "displayName": "Breez",
+  "description": "Apply the Breez theme and seed demo content.",
+  "author": "Antoine",
+  "website": "https://github.com/agriffard/Breez",
+  "version": "1.0.0",
+  "issetuprecipe": true,
+  "steps": [
+    {
+      "name": "Themes",
+      "Data": [
+        {
+          "Name": "Breez",
+          "State": "Installed"
+        }
+      ]
+    },
+    {
+      "name": "Themes",
+      "Data": [
+        {
+          "Name": "Breez",
+          "State": "Enabled"
+        }
+      ]
+    },
+    {
+      "name": "ThemesStep",
+      "Site": {
+        "CurrentThemeName": "Breez"
+      }
+    },
+    {
+      "name": "ContentDefinition",
+      "ContentTypes": [
+        {
+          "Name": "Page",
+          "DisplayName": "Page",
+          "Settings": { "Stereotype": "Content" },
+          "ContentTypePartDefinitionRecords": [
+            { "Name": "TitlePart" },
+            { "Name": "HtmlBodyPart" },
+            { "Name": "AutoroutePart" }
+          ]
+        },
+        {
+          "Name": "BlogPost",
+          "DisplayName": "Blog Post",
+          "Settings": { "Stereotype": "Content" },
+          "ContentTypePartDefinitionRecords": [
+            { "Name": "TitlePart" },
+            { "Name": "HtmlBodyPart" },
+            { "Name": "AutoroutePart" },
+            { "Name": "TagsPart" }
+          ]
+        },
+        {
+          "Name": "Blog",
+          "DisplayName": "Blog",
+          "Settings": { "Stereotype": "Content" },
+          "ContentTypePartDefinitionRecords": [
+            { "Name": "TitlePart" },
+            { "Name": "ListPart" },
+            { "Name": "AutoroutePart" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Menu",
+      "MainMenu": [
+        {
+          "Title": "Home",
+          "Link": "~/"
+        },
+        {
+          "Title": "Blog",
+          "Link": "~/blog"
+        }
+      ]
+    },
+    {
+      "name": "Content",
+      "Data": [
+        {
+          "ContentItemId": "page-home-en",
+          "ContentType": "Page",
+          "DisplayText": "Welcome",
+          "Published": true,
+          "Owner": "admin",
+          "Content": {
+            "TitlePart": { "Title": "Welcome to Breez" },
+            "AutoroutePart": { "Path": "" },
+            "HtmlBodyPart": { "Html": "<p>Clean, modern, and accessible Orchard Core pages powered by Breez.</p>" }
+          },
+          "LocalizationPart": { "Culture": "en" }
+        },
+        {
+          "ContentItemId": "page-home-fr",
+          "ContentType": "Page",
+          "DisplayText": "Bienvenue",
+          "Published": true,
+          "Owner": "admin",
+          "Content": {
+            "TitlePart": { "Title": "Bienvenue sur Breez" },
+            "AutoroutePart": { "Path": "fr" },
+            "HtmlBodyPart": { "Html": "<p>Un thème Orchard Core moderne, accessible et bilingue.</p>" }
+          },
+          "LocalizationPart": { "Culture": "fr" }
+        },
+        {
+          "ContentItemId": "blog-main-en",
+          "ContentType": "Blog",
+          "DisplayText": "Blog",
+          "Published": true,
+          "Owner": "admin",
+          "Content": {
+            "TitlePart": { "Title": "Blog" },
+            "AutoroutePart": { "Path": "blog" }
+          },
+          "LocalizationPart": { "Culture": "en" }
+        },
+        {
+          "ContentItemId": "blog-post-hello-en",
+          "ContentType": "BlogPost",
+          "DisplayText": "Hello Breez",
+          "Published": true,
+          "Owner": "admin",
+          "Content": {
+            "TitlePart": { "Title": "Hello Breez" },
+            "AutoroutePart": { "Path": "blog/hello-breez" },
+            "HtmlBodyPart": { "Html": "<p>This first post introduces the Breez design system.</p>" },
+            "TagsPart": { "Tags": [ "breez", "theme" ] },
+            "ContainedPart": { "ListContentItemId": "blog-main-en" }
+          },
+          "LocalizationPart": { "Culture": "en" }
+        },
+        {
+          "ContentItemId": "blog-post-bonjour-fr",
+          "ContentType": "BlogPost",
+          "DisplayText": "Bonjour Breez",
+          "Published": true,
+          "Owner": "admin",
+          "Content": {
+            "TitlePart": { "Title": "Bonjour Breez" },
+            "AutoroutePart": { "Path": "fr/blog/bonjour-breez" },
+            "HtmlBodyPart": { "Html": "<p>Ce billet présente la version française du thème Breez.</p>" },
+            "TagsPart": { "Tags": [ "breez", "fr" ] }
+          },
+          "LocalizationPart": { "Culture": "fr" }
+        }
+      ]
+    }
+  ]
+}
