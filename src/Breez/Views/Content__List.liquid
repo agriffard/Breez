@@ -1,0 +1,10 @@
+<section class="blog-list">
+  {% for item in Model.ContentItems %}
+    <article class="card p-6 rounded-card shadow-card">
+      <h2 class="card-title mb-2"><a href="{{ item | display_url }}">{{ item.DisplayText }}</a></h2>
+      <p class="card-meta mb-4">{{ item.CreatedUtc | date: "%Y-%m-%d" }}</p>
+      <p>{{ item.Content.BlogPost.HtmlBodyPart.Html | strip_html | truncate: 180 }}</p>
+      <a class="btn btn-outline mt-4" href="{{ item | display_url }}">{{ "Read more" | t }}</a>
+    </article>
+  {% endfor %}
+</section>

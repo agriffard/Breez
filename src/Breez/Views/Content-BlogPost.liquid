@@ -1,0 +1,16 @@
+<article class="article card p-6 rounded-card shadow-card">
+  {% shape_string Model.Content.Parts.TitlePart %}
+  <p class="meta mb-4">
+    {% if Model.ContentItem.PublishedUtc %}
+      {{ "Published" | t }} {{ Model.ContentItem.PublishedUtc | date: "%Y-%m-%d" }}
+    {% endif %}
+  </p>
+  {% if Model.ContentItem.Content.BlogPost.TagsPart.ContentItemIds.size > 0 %}
+    <div class="mb-4">
+      {% for tag in Model.ContentItem.Content.BlogPost.TagsPart.ContentItemIds %}
+        <span class="badge">{{ tag }}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% shape_string Model.Content.Parts.HtmlBodyPart %}
+</article>

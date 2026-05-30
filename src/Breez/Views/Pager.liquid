@@ -1,0 +1,19 @@
+{% if Model.PageCount > 1 %}
+<nav class="pager mt-6" role="navigation" aria-label="{{ "Pagination" | t }}">
+  {% if Model.PreviousPageUrl %}
+    <a href="{{ Model.PreviousPageUrl }}" rel="prev">{{ "Previous" | t }}</a>
+  {% endif %}
+
+  {% for page in Model.PagerItems %}
+    {% if page.IsCurrent %}
+      <span class="active" aria-current="page">{{ page.Page }}</span>
+    {% else %}
+      <a href="{{ page.Url }}">{{ page.Page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if Model.NextPageUrl %}
+    <a href="{{ Model.NextPageUrl }}" rel="next">{{ "Next" | t }}</a>
+  {% endif %}
+</nav>
+{% endif %}

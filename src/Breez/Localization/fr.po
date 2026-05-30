@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: fr\n"
+
+msgid "Skip to main content"
+msgstr "Passer au contenu principal"
+
+msgid "Toggle navigation"
+msgstr "Basculer la navigation"
+
+msgid "Menu"
+msgstr "Menu"
+
+msgid "Toggle dark mode"
+msgstr "Basculer le mode sombre"
+
+msgid "Theme"
+msgstr "Thème"
+
+msgid "Main navigation"
+msgstr "Navigation principale"
+
+msgid "Published"
+msgstr "Publié"
+
+msgid "Read more"
+msgstr "Lire la suite"
+
+msgid "Pagination"
+msgstr "Pagination"
+
+msgid "Previous"
+msgstr "Précédent"
+
+msgid "Next"
+msgstr "Suivant"
+
+msgid "Sorry, we could not find that page."
+msgstr "Désolé, nous n'avons pas trouvé cette page."
+
+msgid "Back to home"
+msgstr "Retour à l'accueil"
+
+msgid "Something went wrong on our side."
+msgstr "Une erreur est survenue de notre côté."

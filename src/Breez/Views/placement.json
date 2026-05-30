@@ -1,0 +1,37 @@
+{
+  "TitlePart": [
+    {
+      "place": "Content:1"
+    }
+  ],
+  "HtmlBodyPart": [
+    {
+      "place": "Content:5"
+    }
+  ],
+  "AutoroutePart": [
+    {
+      "place": "-"
+    }
+  ],
+  "Pager": [
+    {
+      "place": "Content:10"
+    }
+  ],
+  "BreadcrumbShape": [
+    {
+      "place": "Header:5"
+    }
+  ],
+  "Menu": [
+    {
+      "place": "Navigation:1"
+    }
+  ],
+  "MenuItem": [
+    {
+      "place": "Navigation:5"
+    }
+  ]
+}
