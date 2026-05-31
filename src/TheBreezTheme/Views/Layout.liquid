@@ -22,25 +22,25 @@
       </div>
     </div>
     <nav id="primary-nav" class="site-nav container hidden lg:flex py-2" aria-label="{{ "Main navigation" | t }}">
-      {% zone "Navigation" %}
+      {% render_section "Navigation", required: false %}
     </nav>
   </header>
 
   <div class="container py-2">
-    {% zone "Header" %}
+    {% render_section "Header", required: false %}
   </div>
 
   <main id="main-content" class="container py-6" tabindex="-1">
     <div class="grid gap-6 lg:grid-cols-4">
-      <aside class="lg:col-span-1">{% zone "AsideFirst" %}</aside>
-      <section class="lg:col-span-2">{% zone "Content" %}</section>
-      <aside class="lg:col-span-1">{% zone "AsideSecond" %}</aside>
+      <aside class="lg:col-span-1">{% render_section "AsideFirst", required: false %}</aside>
+      <section class="lg:col-span-2">{% render_body %}</section>
+      <aside class="lg:col-span-1">{% render_section "AsideSecond", required: false %}</aside>
     </div>
   </main>
 
   <footer class="footer">
     <div class="container">
-      {% zone "Footer" %}
+      {% render_section "Footer", required: false %}
     </div>
   </footer>
 

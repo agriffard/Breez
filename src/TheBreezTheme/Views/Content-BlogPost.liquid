@@ -1,5 +1,5 @@
 <article class="article card p-6 rounded-card shadow-card">
-  {% shape_string Model.Content.Parts.TitlePart %}
+  {{ Model.Content.TitlePart | shape_render }}
   <p class="meta mb-4">
     {% if Model.ContentItem.PublishedUtc %}
       {{ "Published" | t }} {{ Model.ContentItem.PublishedUtc | date: "%Y-%m-%d" }}
@@ -12,5 +12,5 @@
       {% endfor %}
     </div>
   {% endif %}
-  {% shape_string Model.Content.Parts.HtmlBodyPart %}
+  {{ Model.Content.HtmlBodyPart | shape_render }}
 </article>

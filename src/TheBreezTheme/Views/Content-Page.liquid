@@ -1,6 +1,6 @@
 <article class="article card p-6 rounded-card shadow-card">
-  {% shape_string Model.Content.Parts.TitlePart %}
+  {{ Model.Content.TitlePart | shape_render }}
   <div class="mt-4">
-    {% shape_string Model.Content.Parts.HtmlBodyPart %}
+    {{ Model.Content.HtmlBodyPart | shape_render }}
   </div>
 </article>
