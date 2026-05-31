@@ -1,0 +1,170 @@
+{
+  "name": "TheBreezTheme",
+  "displayName": "The Breez Theme",
+  "description": "Apply the TheBreezTheme theme and seed demo content.",
+  "author": "Antoine",
+  "website": "https://github.com/agriffard/TheBreezTheme",
+  "version": "1.0.0",
+  "issetuprecipe": true,
+  "categories": [ "default" ],
+  "tags": [ "theme", "tailwind" ],
+  "steps": [
+    {
+      "name": "feature",
+      "enable": [
+        "OrchardCore.Contents",
+        "OrchardCore.ContentTypes",
+        "OrchardCore.Title",
+        "OrchardCore.Html",
+        "OrchardCore.Autoroute",
+        "OrchardCore.Alias",
+        "OrchardCore.Lists",
+        "OrchardCore.Menu",
+        "OrchardCore.Navigation",
+        "OrchardCore.Taxonomies",
+        "OrchardCore.ContentLocalization",
+        "OrchardCore.Localization",
+        "OrchardCore.Liquid",
+        "OrchardCore.Themes",
+        "TheBreezTheme"
+      ]
+    },
+    {
+      "name": "themes",
+      "site": "TheBreezTheme"
+    },
+    {
+      "name": "ContentDefinition",
+      "ContentTypes": [
+        {
+          "Name": "Page",
+          "DisplayName": "Page",
+          "Settings": { "Stereotype": "Content" },
+          "ContentTypePartDefinitionRecords": [
+            { "PartName": "TitlePart", "Name": "TitlePart" },
+            { "PartName": "HtmlBodyPart", "Name": "HtmlBodyPart" },
+            { "PartName": "AutoroutePart", "Name": "AutoroutePart" },
+            { "PartName": "LocalizationPart", "Name": "LocalizationPart" }
+          ]
+        },
+        {
+          "Name": "BlogPost",
+          "DisplayName": "Blog Post",
+          "Settings": { "Stereotype": "Content" },
+          "ContentTypePartDefinitionRecords": [
+            { "PartName": "TitlePart", "Name": "TitlePart" },
+            { "PartName": "HtmlBodyPart", "Name": "HtmlBodyPart" },
+            { "PartName": "AutoroutePart", "Name": "AutoroutePart" },
+            { "PartName": "TagsPart", "Name": "TagsPart" },
+            { "PartName": "LocalizationPart", "Name": "LocalizationPart" }
+          ]
+        },
+        {
+          "Name": "Blog",
+          "DisplayName": "Blog",
+          "Settings": { "Stereotype": "Content" },
+          "ContentTypePartDefinitionRecords": [
+            { "PartName": "TitlePart", "Name": "TitlePart" },
+            { "PartName": "ListPart", "Name": "ListPart" },
+            { "PartName": "AutoroutePart", "Name": "AutoroutePart" },
+            { "PartName": "LocalizationPart", "Name": "LocalizationPart" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Menu",
+      "MainMenu": [
+        {
+          "Title": "Home",
+          "Link": "~/"
+        },
+        {
+          "Title": "Blog",
+          "Link": "~/blog"
+        }
+      ]
+    },
+    {
+      "name": "Settings",
+      "HomeRoute": {
+        "Action": "Display",
+        "Controller": "Item",
+        "Area": "OrchardCore.Contents",
+        "ContentItemId": "page-home-en"
+      }
+    },
+    {
+      "name": "Content",
+      "Data": [
+        {
+          "ContentItemId": "page-home-en",
+          "ContentType": "Page",
+          "DisplayText": "Welcome",
+          "Published": true,
+          "Owner": "admin",
+          "Content": {
+            "TitlePart": { "Title": "Welcome to TheBreezTheme" },
+            "AutoroutePart": { "Path": "" },
+            "HtmlBodyPart": { "Html": "<p>Clean, modern, and accessible Orchard Core pages powered by TheBreezTheme.</p>" },
+            "LocalizationPart": { "Culture": "en", "LocalizationSet": "home" }
+          }
+        },
+        {
+          "ContentItemId": "page-home-fr",
+          "ContentType": "Page",
+          "DisplayText": "Bienvenue",
+          "Published": true,
+          "Owner": "admin",
+          "Content": {
+            "TitlePart": { "Title": "Bienvenue sur TheBreezTheme" },
+            "AutoroutePart": { "Path": "fr" },
+            "HtmlBodyPart": { "Html": "<p>Un thème Orchard Core moderne, accessible et bilingue.</p>" },
+            "LocalizationPart": { "Culture": "fr", "LocalizationSet": "home" }
+          }
+        },
+        {
+          "ContentItemId": "blog-main-en",
+          "ContentType": "Blog",
+          "DisplayText": "Blog",
+          "Published": true,
+          "Owner": "admin",
+          "Content": {
+            "TitlePart": { "Title": "Blog" },
+            "AutoroutePart": { "Path": "blog" },
+            "LocalizationPart": { "Culture": "en", "LocalizationSet": "blog" }
+          }
+        },
+        {
+          "ContentItemId": "blog-post-hello-en",
+          "ContentType": "BlogPost",
+          "DisplayText": "Hello TheBreezTheme",
+          "Published": true,
+          "Owner": "admin",
+          "Content": {
+            "TitlePart": { "Title": "Hello TheBreezTheme" },
+            "AutoroutePart": { "Path": "blog/hello-TheBreezTheme" },
+            "HtmlBodyPart": { "Html": "<p>This first post introduces the TheBreezTheme design system.</p>" },
+            "TagsPart": { "Tags": [ "TheBreezTheme", "theme" ] },
+            "ContainedPart": { "ListContentItemId": "blog-main-en" },
+            "LocalizationPart": { "Culture": "en", "LocalizationSet": "hello-post" }
+          }
+        },
+        {
+          "ContentItemId": "blog-post-bonjour-fr",
+          "ContentType": "BlogPost",
+          "DisplayText": "Bonjour TheBreezTheme",
+          "Published": true,
+          "Owner": "admin",
+          "Content": {
+            "TitlePart": { "Title": "Bonjour TheBreezTheme" },
+            "AutoroutePart": { "Path": "fr/blog/bonjour-TheBreezTheme" },
+            "HtmlBodyPart": { "Html": "<p>Ce billet présente la version française du thème TheBreezTheme.</p>" },
+            "TagsPart": { "Tags": [ "TheBreezTheme", "fr" ] },
+            "LocalizationPart": { "Culture": "fr", "LocalizationSet": "hello-post" }
+          }
+        }
+      ]
+    }
+  ]
+}
