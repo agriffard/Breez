@@ -65,7 +65,10 @@
         {
           "Name": "Page",
           "DisplayName": "Page",
-          "Settings": { "Stereotype": "Content" },
+          "Settings": {
+            "ContentTypeSettings": { "Creatable": true, "Listable": true, "Draftable": true, "Versionable": true, "Securable": true },
+            "Stereotype": "Content"
+          },
           "ContentTypePartDefinitionRecords": [
             { "PartName": "TitlePart", "Name": "TitlePart" },
             { "PartName": "HtmlBodyPart", "Name": "HtmlBodyPart" },
@@ -76,7 +79,10 @@
         {
           "Name": "BlogPost",
           "DisplayName": "Blog Post",
-          "Settings": { "Stereotype": "Content" },
+          "Settings": {
+            "ContentTypeSettings": { "Creatable": true, "Listable": true, "Draftable": true, "Versionable": true, "Securable": true },
+            "Stereotype": "Content"
+          },
           "ContentTypePartDefinitionRecords": [
             { "PartName": "TitlePart", "Name": "TitlePart" },
             { "PartName": "HtmlBodyPart", "Name": "HtmlBodyPart" },
@@ -88,7 +94,10 @@
         {
           "Name": "Blog",
           "DisplayName": "Blog",
-          "Settings": { "Stereotype": "Content" },
+          "Settings": {
+            "ContentTypeSettings": { "Creatable": true, "Listable": true, "Versionable": true, "Securable": true },
+            "Stereotype": "Content"
+          },
           "ContentTypePartDefinitionRecords": [
             { "PartName": "TitlePart", "Name": "TitlePart" },
             { "PartName": "ListPart", "Name": "ListPart" },
@@ -128,6 +137,7 @@
           "ContentType": "Page",
           "DisplayText": "Welcome",
           "Published": true,
+          "Latest": true,
           "Owner": "admin",
           "Content": {
             "TitlePart": { "Title": "Welcome to TheBreezTheme" },
@@ -141,6 +151,7 @@
           "ContentType": "Page",
           "DisplayText": "Bienvenue",
           "Published": true,
+          "Latest": true,
           "Owner": "admin",
           "Content": {
             "TitlePart": { "Title": "Bienvenue sur TheBreezTheme" },
@@ -154,6 +165,7 @@
           "ContentType": "Blog",
           "DisplayText": "Blog",
           "Published": true,
+          "Latest": true,
           "Owner": "admin",
           "Content": {
             "TitlePart": { "Title": "Blog" },
@@ -166,6 +178,7 @@
           "ContentType": "BlogPost",
           "DisplayText": "Hello TheBreezTheme",
           "Published": true,
+          "Latest": true,
           "Owner": "admin",
           "Content": {
             "TitlePart": { "Title": "Hello TheBreezTheme" },
@@ -181,6 +194,7 @@
           "ContentType": "BlogPost",
           "DisplayText": "Bonjour TheBreezTheme",
           "Published": true,
+          "Latest": true,
           "Owner": "admin",
           "Content": {
             "TitlePart": { "Title": "Bonjour TheBreezTheme" },
