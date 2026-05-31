@@ -2,8 +2,8 @@ using OrchardCore.DisplayManagement.Manifest;
 
 [assembly: Theme(
     Name = "Breez",
-    Author = "Antoine",
+    Author = "Antoine Griffard",
     Version = "1.0.0",
-    Description = "A Tailwind CSS v4 front-end theme for Orchard Core.",
-    Tags = new[] { "theme", "tailwind" }
+    Description = "A Tailwind CSS front-end theme for Orchard Core.",
+    Tags = new[] { "tailwind" }
 )]

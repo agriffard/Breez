@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Breez - A clean Orchard Core theme</title>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container py-3 flex items-center justify-between gap-4">
+      <a class="brand" href="#">Breez</a>
+      <div class="inline-flex gap-2">
+        <button id="mobile-nav-toggle" class="btn btn-outline lg:hidden" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">Menu</button>
+        <button id="theme-toggle" class="btn btn-outline" type="button" aria-pressed="false" aria-label="Toggle dark mode">Theme</button>
+      </div>
+    </div>
+    <nav id="primary-nav" class="site-nav container hidden lg:flex py-2" aria-label="Main navigation">
+      <a href="#" aria-current="page">Home</a>
+      <a href="#features">Features</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container text-center py-10">
+        <span class="badge mb-4">Orchard Core Theme</span>
+        <h1 class="md:text-2xl xl:text-3xl" style="font-size:clamp(2rem,5vw,3.25rem)">Build clean, fast websites with Breez</h1>
+        <p class="text-lg" style="max-width:42rem;margin:1rem auto;color:var(--muted)">
+          A lightweight, accessible and responsive theme. Dark mode out of the box,
+          modern OKLCH colors and zero JavaScript framework dependencies.
+        </p>
+        <div class="inline-flex gap-3 mt-4">
+          <a class="btn btn-primary" href="#features">Get started</a>
+          <a class="btn btn-outline" href="#blog">Read the blog</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="container py-10">
+      <h2 class="text-center mb-4">Why Breez</h2>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="card p-6">
+          <h3 class="card-title">Fast</h3>
+          <p class="card-meta">Tiny CSS footprint, no runtime framework. Pages load instantly.</p>
+        </article>
+        <article class="card p-6">
+          <h3 class="card-title">Accessible</h3>
+          <p class="card-meta">Skip links, focus rings, ARIA labels and semantic markup baked in.</p>
+        </article>
+        <article class="card p-6">
+          <h3 class="card-title">Dark mode</h3>
+          <p class="card-meta">Respects system preference and remembers your choice across visits.</p>
+        </article>
+        <article class="card p-6">
+          <h3 class="card-title">Responsive</h3>
+          <p class="card-meta">Fluid grids and breakpoints from mobile to wide desktop.</p>
+        </article>
+      </div>
+    </section>
+
+    <hr class="container">
+
+    <!-- Blog -->
+    <section id="blog" class="container py-10">
+      <div class="flex items-center justify-between gap-4 mb-4">
+        <h2 style="margin:0">Latest posts</h2>
+        <a class="text-sm font-semibold" href="#">View all &rarr;</a>
+      </div>
+      <div class="blog-list">
+        <article class="card p-6">
+          <span class="badge mb-2">Guide</span>
+          <h3 class="card-title">Getting started with Orchard Core</h3>
+          <p class="card-meta mb-2">May 28, 2026 &middot; 5 min read</p>
+          <p>Install, configure and ship your first Orchard Core site using the Breez theme as a starting point.</p>
+          <a class="text-sm font-semibold" href="#">Read more &rarr;</a>
+        </article>
+        <article class="card p-6">
+          <span class="badge mb-2">Design</span>
+          <h3 class="card-title">Theming with OKLCH colors</h3>
+          <p class="card-meta mb-2">May 20, 2026 &middot; 4 min read</p>
+          <p>Why perceptually-uniform color spaces make building consistent palettes far easier.</p>
+          <a class="text-sm font-semibold" href="#">Read more &rarr;</a>
+        </article>
+        <article class="card p-6">
+          <span class="badge mb-2">Tips</span>
+          <h3 class="card-title">Accessibility checklist</h3>
+          <p class="card-meta mb-2">May 12, 2026 &middot; 6 min read</p>
+          <p>A practical checklist to make sure every page you publish is usable by everyone.</p>
+          <a class="text-sm font-semibold" href="#">Read more &rarr;</a>
+        </article>
+      </div>
+
+      <!-- Pager -->
+      <div class="pager mt-6 justify-between" style="justify-content:center">
+        <span class="active">1</span>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">Next &rarr;</a>
+      </div>
+    </section>
+
+    <hr class="container">
+
+    <!-- Contact -->
+    <section id="contact" class="container py-10">
+      <div class="article">
+        <h2 class="text-center">Get in touch</h2>
+        <p class="text-center" style="color:var(--muted)">Have a question about Breez? Send us a message.</p>
+        <form class="card p-6 mt-4" onsubmit="return false">
+          <div class="mb-4">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name">
+          </div>
+          <div class="mb-4">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="you@example.com">
+            <p class="form-help">We never share your email.</p>
+          </div>
+          <div class="mb-4">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Type your message..."></textarea>
+          </div>
+          <button class="btn btn-primary w-full" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container flex items-center justify-between gap-4" style="flex-wrap:wrap">
+      <span>&copy; 2026 Breez. Built with Orchard Core.</span>
+      <nav class="inline-flex gap-3">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var doc = document.documentElement;
+      var key = 'breez-theme';
+      var mq = window.matchMedia('(prefers-color-scheme: dark)');
+      var stored = localStorage.getItem(key);
+      var dark = stored ? stored === 'dark' : mq.matches;
+      doc.classList.toggle('dark', dark);
+
+      var themeBtn = document.getElementById('theme-toggle');
+      if(themeBtn){
+        themeBtn.setAttribute('aria-pressed', String(dark));
+        themeBtn.addEventListener('click', function(){
+          dark = !doc.classList.contains('dark');
+          doc.classList.toggle('dark', dark);
+          localStorage.setItem(key, dark ? 'dark' : 'light');
+          themeBtn.setAttribute('aria-pressed', String(dark));
+        });
+      }
+
+      var navBtn = document.getElementById('mobile-nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if(navBtn && nav){
+        navBtn.addEventListener('click', function(){
+          var expanded = navBtn.getAttribute('aria-expanded') === 'true';
+          navBtn.setAttribute('aria-expanded', String(!expanded));
+          nav.classList.toggle('hidden', expanded);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

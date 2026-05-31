@@ -1,13 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <PackageId>Breez</PackageId>
-    <Version>1.0.0</Version>
-    <Title>Breez</Title>
-    <Authors>Antoine Griffard</Authors>
-    <Description>A Tailwind CSS front-end theme for Orchard Core.</Description>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <TailwindExeExtension Condition="'$(OS)' == 'Windows_NT'">.exe</TailwindExeExtension>
     <TailwindCli>$(MSBuildProjectDirectory)\tailwindcss$(TailwindExeExtension)</TailwindCli>
   </PropertyGroup>
@@ -19,6 +13,6 @@
   </ItemGroup>
 
   <Target Name="BuildTailwindIfAvailable" BeforeTargets="BeforeBuild" Condition="Exists('$(TailwindCli)')">
-    <Exec Command='"$(TailwindCli)" -i "$(MSBuildProjectDirectory)/Assets/css/input.css" -o "$(MSBuildProjectDirectory)/wwwroot/css/site.css" --minify' />
+    <Exec Command="&quot;$(TailwindCli)&quot; -i &quot;$(MSBuildProjectDirectory)/Assets/css/input.css&quot; -o &quot;$(MSBuildProjectDirectory)/wwwroot/css/site.css&quot; --minify" />
   </Target>
 </Project>
